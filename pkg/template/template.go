@@ -41,6 +41,9 @@ func NewFuncMap() []template.FuncMap {
 		"AppSubURL": func() string {
 			return setting.AppSubURL
 		},
+		"AppStaticURL": func() string {
+			return setting.AppStaticURL
+		},
 		"AppURL": func() string {
 			return setting.AppURL
 		},

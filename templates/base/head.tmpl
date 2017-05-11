@@ -39,36 +39,36 @@
 		<meta property="og:site_name" content="Gogs">
 	{{end}}
 
-	<link rel="shortcut icon" href="{{AppSubURL}}/img/favicon.png" />
+	<link rel="shortcut icon" href="{{AppStaticURL}}/img/favicon.png" />
 
-	<script src="{{AppSubURL}}/js/jquery-1.11.3.min.js"></script>
-	<script src="{{AppSubURL}}/js/libs/jquery.are-you-sure.js"></script>
-	<link rel="stylesheet" href="{{AppSubURL}}/assets/font-awesome-4.6.3/css/font-awesome.min.css">
-	<link rel="stylesheet" href="{{AppSubURL}}/assets/octicons-4.3.0/octicons.min.css">
+	<script src="{{AppStaticURL}}/js/jquery-1.11.3.min.js"></script>
+	<script src="{{AppStaticURL}}/js/libs/jquery.are-you-sure.js"></script>
+	<link rel="stylesheet" href="{{AppStaticURL}}/assets/font-awesome-4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="{{AppStaticURL}}/assets/octicons-4.3.0/octicons.min.css">
 
 	<!-- notebook.js for rendering ipython notebooks and marked.js for rendering markdown in notebooks -->
 	{{if .IsIPythonNotebook }}
-		<script src="{{AppSubURL}}/plugins/notebookjs-0.2.6/notebook.min.js"></script>
-		<script src="{{AppSubURL}}/plugins/marked-0.3.6/marked.min.js"></script>
+		<script src="{{AppStaticURL}}/plugins/notebookjs-0.2.6/notebook.min.js"></script>
+		<script src="{{AppStaticURL}}/plugins/marked-0.3.6/marked.min.js"></script>
 	{{end}}
 
 	{{if .RequireSimpleMDE}}
-		<link rel="stylesheet" href="{{AppSubURL}}/plugins/simplemde-1.10.1/simplemde.min.css">
-		<script src="{{AppSubURL}}/plugins/simplemde-1.10.1/simplemde.min.js"></script>
-		<script src="{{AppSubURL}}/plugins/codemirror-5.17.0/addon/mode/loadmode.js"></script>
-		<script src="{{AppSubURL}}/plugins/codemirror-5.17.0/mode/meta.js"></script>
+		<link rel="stylesheet" href="{{AppStaticURL}}/plugins/simplemde-1.10.1/simplemde.min.css">
+		<script src="{{AppStaticURL}}/plugins/simplemde-1.10.1/simplemde.min.js"></script>
+		<script src="{{AppStaticURL}}/plugins/codemirror-5.17.0/addon/mode/loadmode.js"></script>
+		<script src="{{AppStaticURL}}/plugins/codemirror-5.17.0/mode/meta.js"></script>
 		<script>
-			CodeMirror.modeURL =  "{{AppSubURL}}/plugins/codemirror-5.17.0/mode/%N/%N.js";
+			CodeMirror.modeURL =  "{{AppStaticURL}}/plugins/codemirror-5.17.0/mode/%N/%N.js";
 		</script>
 	{{end}}
 
 	<!-- Stylesheet -->
-	<link rel="stylesheet" href="{{AppSubURL}}/css/semantic-2.2.10.min.css">
-	<link rel="stylesheet" href="{{AppSubURL}}/css/gogs.css?v={{MD5 AppVer}}">
+	<link rel="stylesheet" href="{{AppStaticURL}}/css/semantic-2.2.10.min.css">
+	<link rel="stylesheet" href="{{AppStaticURL}}/css/gogs.css?v={{MD5 AppVer}}">
 
 	<!-- JavaScript -->
-	<script src="{{AppSubURL}}/js/semantic-2.2.10.min.js"></script>
-	<script src="{{AppSubURL}}/js/gogs.js?v={{MD5 AppVer}}"></script>
+	<script src="{{AppStaticURL}}/js/semantic-2.2.10.min.js"></script>
+	<script src="{{AppStaticURL}}/js/gogs.js?v={{MD5 AppVer}}"></script>
 
 	<title>{{if .Title}}{{.Title}} - {{end}}{{AppName}}</title>
 
@@ -87,7 +87,7 @@
 						<div class="column">
 							<div class="ui top secondary menu">
 								<a class="item brand" href="{{AppSubURL}}/">
-									<img class="ui mini image" src="{{AppSubURL}}/img/favicon.png">
+									<img class="ui mini image" src="{{AppStaticURL}}/img/favicon.png">
 								</a>
 
 								{{if .IsLogged}}

@@ -57,6 +57,7 @@ var (
 	AppURL         string
 	AppSubURL      string
 	AppSubURLDepth int // Number of slashes
+	AppStaticURL   string
 	AppPath        string
 	AppDataPath    string
 
@@ -432,6 +433,7 @@ func NewContext() {
 	// This value is empty if site does not have sub-url.
 	AppSubURL = strings.TrimSuffix(url.Path, "/")
 	AppSubURLDepth = strings.Count(AppSubURL, "/")
+	AppStaticURL = sec.Key("AppStaticURL").MustString("http://code-static.jiajinli.com")
 
 	Protocol = SCHEME_HTTP
 	if sec.Key("PROTOCOL").String() == "https" {
